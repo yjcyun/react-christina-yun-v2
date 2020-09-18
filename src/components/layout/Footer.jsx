@@ -1,26 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import HomeGrid from './HomeGrid'
 import Logo from './Logo'
 
 const Footer = () => {
   return (
-    <FooterStyled>
-      <div>Contacts</div>
+    <HomeGrid footer title='Contact'>
       <FootContent>
         <div>xtinayun.web [at] gmail.com</div>
         <a href=''>Github</a>
         <a href=''>LinkedIn</a>
       </FootContent>
       <MadeBy>Made by<Logo footer /></MadeBy>
-    </FooterStyled>
+    </HomeGrid>
   )
 }
-
-const FooterStyled = styled.footer`
-  padding: 3rem 0;
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-`
 
 const FootContent = styled.div`
   display: flex;
