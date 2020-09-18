@@ -3,13 +3,12 @@ import { Link } from 'gatsby'
 import { CgMenuRight } from 'react-icons/cg'
 import { NavLinks } from '../../constants/nav'
 import styled from 'styled-components'
+import Logo from './Logo'
 
 const Navbar = ({ open, setOpen }) => {
   return (
     <Header>
-      <Logo>
-        <Link to='/'>XY.<span>Web</span></Link>
-      </Logo>
+      <Logo />
       <MenuButton onClick={() => setOpen(!open)}>
         <CgMenuRight />
       </MenuButton>
@@ -27,11 +26,9 @@ const Header = styled.header`
   align-items: center;
   padding: 0 1rem;
   height: 5rem;
-`
 
-const Logo = styled.div`
-  span{
-    color: var(--accent-clr);
+  @media (min-width: 768px) {
+    padding: 0;
   }
 `
 
@@ -40,7 +37,7 @@ const NavbarStyled = styled.nav`
 
   li {
     list-style: none;
-    padding: 0 1rem;
+    padding-left: 1.5rem;
   }
 
   @media (min-width: 768px) {

@@ -1,8 +1,10 @@
 /* --------- GLOBAL CSS -------- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 :root {
   --accent-clr: #5cdb95;
+  --dark-grey: #888888;
+  --black: #1a1a1a;
 }
 
 * {
@@ -12,11 +14,11 @@
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: var(--black);
   color: #fff;
   margin: 0 auto;
   max-width: 1170px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 a {

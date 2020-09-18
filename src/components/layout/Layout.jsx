@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import styled from 'styled-components'
 import Sidebar from './Sidebar'
 import './layout.css'
+import Hr from './Hr'
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
       <main>
         {children}
       </main>
+      <Hr />
       <Footer />
     </LayoutStyled>
   )
