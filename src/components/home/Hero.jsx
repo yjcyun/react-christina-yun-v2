@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import HomeGrid from '../layout/HomeGrid'
 
 const Hero = () => {
   return (
@@ -8,7 +7,7 @@ const Hero = () => {
       Hello! My name is Christina.
       <br />
         I make <span>functional, modern, and minimalistic websites</span>, applications, and anything in between.<br />
-        My main focus is on <span>frontend</span> web development.
+        My main object is <span>frontend</span> web development.
     </HeroBody>
   )
 }

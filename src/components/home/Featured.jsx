@@ -32,10 +32,12 @@ const Featured = () => {
         <EachProject
           image={data.heather.childImageSharp.fluid}
           name='HEATHER DICK'
-          live='https://google.ca'
+          live='https://heatherdick.ca'
           code='https://google.ca'
+          stack1='Gatsby'
+          stack2='Strapi'
         >
-          Custom portfolio website built with <span>Gatsby</span> and <span>Strapi</span>.
+          A multi-page portfolio website built for an actress featured with a full biography page, blog, and gallery. Content easily maintainable by user using CMS(Strapi).
         </EachProject>
 
         <EachProject
@@ -43,8 +45,12 @@ const Featured = () => {
           name='GO TRAVEL'
           live='https://google.ca'
           code='https://google.ca'
+          stack1='React'
+          stack2='Express'
+          stack3='Node'
+          stack4='MongoDB'
         >
-          A travel agency website built with <span>React</span>, <span>Node</span>, and <span>MongoDB</span>.
+          A travel agency website complete with an admin page where an user(admin) can easily maintain the database using CRUD operations.
         </EachProject>
       </FeaturedProjects>
       <FeaturedLink>
@@ -61,9 +67,8 @@ const FeaturedSection = styled.section`
 `
 const FeaturedProjects = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 13rem; 
-  grid-column-gap: 5rem;
   margin-bottom: 8rem;
 `
 

@@ -4,13 +4,21 @@ import styled from 'styled-components'
 import { HiOutlineGlobeAlt } from 'react-icons/hi'
 import { BsFileCode } from 'react-icons/bs'
 
-const EachProject = ({ image, name, children, live, code }) => {
+const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3, stack4 }) => {
   return (
     <>
-      <Image fluid={image} />
+      <ImageWrapper>
+        <Image fluid={image} />
+      </ImageWrapper>
       <FeaturedDesc>
         <FeaturedDescTop>
           <div className='name'>{name}</div>
+          <div className='stack'>
+            <span>{stack1}</span>
+            <span>{stack2}</span>
+            <span>{stack3}</span>
+            <span>{stack4}</span>
+          </div>
           <div className='desc'>{children}</div>
         </FeaturedDescTop>
         <FeaturedLinks>
@@ -21,6 +29,9 @@ const EachProject = ({ image, name, children, live, code }) => {
     </>
   )
 }
+const ImageWrapper = styled.div`
+
+`
 
 const FeaturedDesc = styled.div`
   margin-left: 3rem;
@@ -31,20 +42,26 @@ const FeaturedDesc = styled.div`
 
 const FeaturedDescTop = styled.div`
   .name {
-    margin-bottom: 3rem;
     color: var(--dark-grey);
   }
   .desc {
-    font-size: 1.4rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
     span {
       color: var(--accent-clr);
+    }
+  }
+  .stack {
+    color: var(--accent-clr);
+    margin: 1rem 0;
+    span {
+      font-family: var(--sec-ff);
+      margin-right: 1rem;
     }
   }
 `
 
 const FeaturedLinks = styled.div`
-  margin-bottom: 2rem;
-
   a {
     margin-right: 1rem;
     font-family: var(--sec-ff);
