@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { CgMenuRight } from 'react-icons/cg'
 import { NavLinks } from '../../constants/nav'
 import styled from 'styled-components'
@@ -37,7 +36,8 @@ const NavbarStyled = styled.nav`
 
   li {
     list-style: none;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
+    font-family: var(--sec-ff);
   }
 
   @media (min-width: 768px) {

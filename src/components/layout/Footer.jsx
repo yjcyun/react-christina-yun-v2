@@ -8,8 +8,8 @@ const Footer = () => {
     <HomeGrid footer title='Contact'>
       <FootContent>
         <div>xtinayun.web [at] gmail.com</div>
-        <a href=''>Github</a>
-        <a href=''>LinkedIn</a>
+        <a href='https://google.ca'>Github</a>
+        <a href='https://google.ca'>LinkedIn</a>
       </FootContent>
       <MadeBy>Made by<Logo footer /></MadeBy>
     </HomeGrid>

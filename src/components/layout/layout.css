@@ -1,10 +1,12 @@
 /* --------- GLOBAL CSS -------- */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Noto+Sans+JP:wght@400;700&display=swap');
 
 :root {
   --accent-clr: #5cdb95;
   --dark-grey: #888888;
   --black: #1a1a1a;
+  --pri-ff: 'Noto Sans JP', sans-serif;
+  --sec-ff: 'IBM Plex Mono', monospace;
 }
 
 * {
@@ -18,7 +20,7 @@ body {
   color: #fff;
   margin: 0 auto;
   max-width: 1170px;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--pri-ff);
 }
 
 a {
