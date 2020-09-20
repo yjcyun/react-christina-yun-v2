@@ -25,15 +25,26 @@ body {
 }
 
 .main-padding {
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 0;
+}
+
+.min-height {
+  min-height: calc(100vh - 15rem);
+}
+
+@media (min-width: 400px) {
+  .main-padding {
+    padding: 5rem 2rem 0;
+  }
 }
 
 @media (min-width: 1200px) {
-  body {
-    padding: 0;
-  }
   .main-padding {
-    padding: 5rem 4rem;
+    padding: 5rem 0 0;
+  }
+
+  .min-height {
+    min-height: calc(100vh - 19rem);
   }
 }
 

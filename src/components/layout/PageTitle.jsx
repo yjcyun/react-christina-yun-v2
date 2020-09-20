@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const PageTitle = ({ title, subtitle }) => {
+const PageTitle = ({ title, subtitle}) => {
   return (
     <PageTitleStyled subtitle={subtitle}>
       <h2>{title}</h2>

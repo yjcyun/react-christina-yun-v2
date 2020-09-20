@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <Navbar open={open} setOpen={setOpen} checkActive={checkActive} />
       <Sidebar open={open} setOpen={setOpen} checkActive={checkActive} />
       <main className='main-padding'>
-        {children}
+        <div className='min-height'>{children}</div>
         <Hr />
         <Footer />
       </main>

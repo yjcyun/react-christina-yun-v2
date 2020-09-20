@@ -19,7 +19,7 @@ export const NavLinks = ({ checkActive }) => {
     <li key={link.id}>
       <Link
         activeClassName='selected'
-        isActive={checkActive}
+        isactive={checkActive}
         to={link.link}
       >
         {link.text}

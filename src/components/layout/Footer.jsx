@@ -25,7 +25,7 @@ const MadeBy = styled.div`
   display: flex;
   margin-top: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 996px) {
     justify-content: flex-end;  
     margin-top: 0;
   }

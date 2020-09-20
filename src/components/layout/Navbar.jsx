@@ -44,6 +44,14 @@ const Header = styled.header`
   visibility: ${props => props.show ? 'visible' : 'hidden'};
   transition: all 0.2s ${props => (props.show ? 'ease-in' : 'ease-out')};
   transform: ${props => props.show ? 'none' : 'translate(0, -100%)'};
+
+  @media (min-width: 400px) {
+    padding: 0 2rem;
+  }
+
+  @media(min-width:1200px) {
+    padding: 0;
+  }
 `
 
 const NavbarStyled = styled.nav`
