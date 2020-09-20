@@ -4,9 +4,6 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { CgMenuRight } from 'react-icons/cg'
 import { NavLinks } from '../../constants/nav'
 import styled from 'styled-components'
-import Logo from './Logo'
-
-
 
 const Navbar = ({ open, setOpen, checkActive }) => {
   const [hideOnScroll, setHideOnScroll] = useState(true);

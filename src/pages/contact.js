@@ -6,7 +6,7 @@ import PageTitle from '../components/layout/PageTitle'
 const ContactPage = () => {
   return (
     <Layout>
-      <PageTitle title='Contact'/>
+      <PageTitle title='Contact' />
       <Contact />
     </Layout>
   )

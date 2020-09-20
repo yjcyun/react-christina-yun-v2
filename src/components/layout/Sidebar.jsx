@@ -21,8 +21,8 @@ const Sidebar = ({ open, setOpen,checkActive }) => {
       <SidebarFooter>
         <div>Social Media</div>
         <div>
-          <a href='https://github.com/yjcyun'><IoLogoGithub /></a>
-          <a href='https://www.linkedin.com/in/xtina-yun/'><IoLogoLinkedin /></a>
+          <a href='https://github.com/yjcyun' target='_blank' aria-label='github' rel="noreferrer"><IoLogoGithub /></a>
+          <a href='https://www.linkedin.com/in/xtina-yun/' target='_blank' aria-label='linkedin' rel="noreferrer"><IoLogoLinkedin /></a>
         </div>
       </SidebarFooter>
     </SidebarStyled>

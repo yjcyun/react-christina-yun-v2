@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import styled from 'styled-components'
 import HomeGrid from '../layout/HomeGrid'

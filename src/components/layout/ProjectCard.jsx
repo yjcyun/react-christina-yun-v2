@@ -1,7 +1,6 @@
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import EachProject from '../home/EachProject'
-import Reveal from 'react-reveal/Reveal'
 
 const projectImages = graphql`
   {

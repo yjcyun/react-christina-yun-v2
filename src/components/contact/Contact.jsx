@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import HomeGrid from '../layout/HomeGrid'
 import Reveal from 'react-reveal/Reveal'
 
 const Contact = () => {
