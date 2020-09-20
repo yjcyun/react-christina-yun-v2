@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: 'Christina Yun',
-    description: 'Christina is a frontend web developer in Toronto, ON.',
+    description: 'I am a a freelance frontend website developer from Toronto, Canada . Learn more about what I can do.',
     author: 'Christina Yun',
-    data:['item1', 'item2']
+    siteUrl: 'https://christinayun.ca'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
