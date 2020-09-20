@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import Reveal from 'react-reveal/Reveal'
 
 const Hr = () => {
   return (
+    <Reveal effect='fadeInUp'>
     <HrStyled></HrStyled>
+    </Reveal>
   )
 }
 

@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import HomeGrid from '../layout/HomeGrid'
+import Reveal from 'react-reveal/Reveal'
 
 const Contact = () => {
   return (
-    <ContactStyled>
-      <p>If you are interested in working with me or have a project for which you need help develop <span>frontend</span>, please send me an email:</p>
-      <p className='email'>contact [at] christinayun.ca</p>
-    </ContactStyled>
+    <Reveal effect='fadeInUp'>
+      <ContactStyled>
+        <p>If you are interested in working with me or have a project for which you need help develop <span>frontend</span>, please send me an email:</p>
+        <p className='email'>contact [at] christinayun.ca</p>
+      </ContactStyled>
+    </Reveal>
   )
 }
 

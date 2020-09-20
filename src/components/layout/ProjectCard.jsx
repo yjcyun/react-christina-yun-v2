@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import EachProject from '../home/EachProject'
+import Reveal from 'react-reveal/Reveal'
 
 const projectImages = graphql`
   {
@@ -36,7 +37,6 @@ const ProjectCard = () => {
       >
         A multi-page portfolio website built for an actress featured with a full biography page, blog, and gallery. Content easily maintainable by user using CMS(Strapi).
       </EachProject>
-
       <EachProject
         image={data.gotravel.childImageSharp.fluid}
         name='GO TRAVEL'

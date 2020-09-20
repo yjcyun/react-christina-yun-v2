@@ -22,7 +22,7 @@ const Sidebar = ({ open, setOpen,checkActive }) => {
         <div>Social Media</div>
         <div>
           <a href='https://github.com/yjcyun'><IoLogoGithub /></a>
-          <a href='https://github.com/yjcyun'><IoLogoLinkedin /></a>
+          <a href='https://www.linkedin.com/in/xtina-yun/'><IoLogoLinkedin /></a>
         </div>
       </SidebarFooter>
     </SidebarStyled>

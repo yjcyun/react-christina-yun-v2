@@ -5,7 +5,7 @@ import { archive } from '../../constants/archive'
 import { IoIosGlobe, IoLogoGithub } from 'react-icons/io'
 import { BsDot } from 'react-icons/bs'
 import PageTitle from '../layout/PageTitle'
-
+import Fade from 'react-reveal/Fade'
 
 const renderArchive = () => {
   // SORT BY ID
@@ -32,20 +32,22 @@ const renderArchive = () => {
 const PortfolioTable = () => {
   return (
     <>
-    <PageTitle title='Archive' subtitle/>
-    <TableStyled>
-      <thead>
-        <tr className='table-head'>
-          {/* <th>Year</th> */}
-          <th className='title'>Title</th>
-          <th className='built-with'>Built with</th>
-          <th>Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        {renderArchive()}
-      </tbody>
-    </TableStyled>
+      <PageTitle title='Archive' subtitle />
+      <TableStyled>
+        <thead>
+          <tr className='table-head'>
+            {/* <th>Year</th> */}
+            <th className='title'>Title</th>
+            <th className='built-with'>Built with</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <Fade bottom cascade>
+            {renderArchive()}
+          </Fade>
+        </tbody>
+      </TableStyled>
     </>
   )
 }

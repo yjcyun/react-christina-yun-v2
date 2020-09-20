@@ -15,9 +15,26 @@ const Hero = () => {
 const HeroBody = styled.div`
   margin: 3rem auto 5rem;
   font-size: 1.5rem;
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 
   span {
     color: var(--accent-clr);
+  }
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0)
+    }
   }
 
   @media (min-width: 996px){

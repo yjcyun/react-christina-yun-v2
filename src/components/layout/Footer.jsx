@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import HomeGrid from './HomeGrid'
-import Logo from './Logo'
+import Reveal from 'react-reveal/Reveal'
 
 const Footer = () => {
   return (
     <HomeGrid footer title='Contact'>
-      <FootContent>
-        <div>xtinayun.web [at] gmail.com</div>
-        <a href='https://google.ca'>Github</a>
-        <a href='https://google.ca'>LinkedIn</a>
-      </FootContent>
-      <MadeBy>Made by Christina Yun</MadeBy>
+      <Reveal effect='fadeInUp'>
+        <FootContent>
+          <div>contact [at] christinayun.ca</div>
+          <a href='https://github.com/yjcyun'>Github</a>
+          <a href='https://www.linkedin.com/in/xtina-yun/'>LinkedIn</a>
+        </FootContent>
+        <MadeBy>Made by Christina Yun</MadeBy>
+      </Reveal>
     </HomeGrid>
   )
 }

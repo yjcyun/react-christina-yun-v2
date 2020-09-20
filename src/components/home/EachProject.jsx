@@ -2,21 +2,26 @@ import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { IoIosGlobe, IoLogoGithub } from 'react-icons/io'
+import Reveal from 'react-reveal/Reveal'
 
 const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3, stack4 }) => {
   return (
     <EachProjectStyled>
-      <Image fluid={image} />
+      <Reveal effect='fadeInUp'>
+        <Image fluid={image} />
+      </Reveal>
       <FeaturedDesc>
         <FeaturedDescTop>
-          <div className='name'>{name}</div>
-          <div className='stack'>
-            <span>{stack1}</span>
-            <span>{stack2}</span>
-            <span>{stack3}</span>
-            <span>{stack4}</span>
-          </div>
-          <div className='desc'>{children}</div>
+          <Reveal effect='fadeInUp'>
+            <div className='name'>{name}</div>
+            <div className='stack'>
+              <span>{stack1}</span>
+              <span>{stack2}</span>
+              <span>{stack3}</span>
+              <span>{stack4}</span>
+            </div>
+            <div className='desc'>{children}</div>
+          </Reveal>
         </FeaturedDescTop>
         <FeaturedLinks>
           <a href={live} target='_blank' aria-label='live' rel="noreferrer"><IoIosGlobe className='icon' />Live</a>
@@ -24,7 +29,7 @@ const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3
           <a href={code} target='_blank' aria-label='github' rel="noreferrer"><IoLogoGithub className='icon' />Code</a>
         </FeaturedLinks>
       </FeaturedDesc>
-    </EachProjectStyled>
+    </EachProjectStyled >
   )
 }
 const EachProjectStyled = styled.div`
@@ -54,9 +59,6 @@ const FeaturedDescTop = styled.div`
   .desc {
     margin: 2rem 0;
     font-size: 1.2rem;
-    span {
-      color: var(--accent-clr);
-    }
   }
   .stack {
     color: var(--accent-clr);
