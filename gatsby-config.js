@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/react-christina-yun-v2",
   siteMetadata: {
     title: 'Christina Yun',
     description: 'I am a a freelance frontend website developer from Toronto, Canada . Learn more about what I can do.',
