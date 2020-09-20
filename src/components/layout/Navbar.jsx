@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { CgMenuRight } from 'react-icons/cg'
 import { NavLinks } from '../../constants/nav'
 import styled from 'styled-components'
 import Logo from './Logo'
-import { Link } from 'gatsby'
 
-const Navbar = ({ open, setOpen }) => {
+
+
+const Navbar = ({ open, setOpen, checkActive }) => {
+  const [hideOnScroll, setHideOnScroll] = useState(true);
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    const isShow = currPos.y > prevPos.y;
+    if (isShow !== hideOnScroll) setHideOnScroll(isShow);
+  }, [hideOnScroll]);
+
   return (
-    <Header>
-      <Link to='/'>Christina Yun</Link>
+    <Header show={hideOnScroll} top={!hideOnScroll}>
+      <Link to='/' className='logo'>Christina Yun</Link>
       <MenuButton onClick={() => setOpen(!open)}>
         <CgMenuRight />
       </MenuButton>
       <NavbarStyled>
-        {NavLinks}
+        {NavLinks(checkActive)}
       </NavbarStyled>
     </Header>
   )
@@ -21,15 +31,19 @@ const Navbar = ({ open, setOpen }) => {
 
 const Header = styled.header`
   display: flex;
+  position: fixed;
+  top: 0;
   width: 100%;
+  max-width: 1170px;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   height: 5rem;
-
-  @media (min-width: 768px) {
-    padding: 0;
-  }
+  z-index: 99;
+  background-color: var(--black);
+  visibility: ${props => props.show ? 'visible' : 'hidden'};
+  transition: all 0.2s ${props => (props.show ? 'ease-in' : 'ease-out')};
+  transform: ${props => props.show ? 'none' : 'translate(0, -100%)'};
 `
 
 const NavbarStyled = styled.nav`
@@ -46,15 +60,12 @@ const NavbarStyled = styled.nav`
   }
 `
 
-const MenuButton = styled.button`
+export const MenuButton = styled.button`
   cursor: pointer;
   background: none;
   border: none;
   color: #fff;
   font-size: 2rem;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
 
   @media (min-width: 768px) {
     display: none

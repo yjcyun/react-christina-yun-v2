@@ -1,52 +1,82 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLinks } from '../../constants/nav'
+import { IoMdClose, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
+import { MenuButton } from './Navbar'
 
-const Sidebar = ({ open }) => {
+
+
+const Sidebar = ({ open, setOpen,checkActive }) => {
   return (
-    <SidebarOverlay open={open}>
-      <SidebarStyled>
-        {NavLinks}
-      </SidebarStyled>
-    </SidebarOverlay>
+    <SidebarStyled open={open}>
+      <div>
+        <SidebarTop>
+          <div className='logo'>Christina Yun</div>
+          <MenuButton onClick={() => { setOpen(!open) }}>
+            <IoMdClose />
+          </MenuButton>
+        </SidebarTop>
+        {NavLinks(checkActive)}
+      </div>
+      <SidebarFooter>
+        <div>Social Media</div>
+        <div>
+          <a href='https://github.com/yjcyun'><IoLogoGithub /></a>
+          <a href='https://github.com/yjcyun'><IoLogoLinkedin /></a>
+        </div>
+      </SidebarFooter>
+    </SidebarStyled>
   )
 }
-const SidebarOverlay = styled.div`
-  height: 100%;
-  width: calc(100% - 75vw);
+
+const SidebarTop = styled.div`
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 1.3rem;
+    font-family: var(--sec-ff);
+  }
+`
+
+const SidebarStyled = styled.aside`
   position: fixed;
-  left: 0;
-  top: 5rem;
-  /* background-color: rgba(0,0,0,0.7); */
-  transform: ${props => props.open ? '0' : 'translateX(-100vw)'};
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: var(--black);
+  transform: ${props => props.open ? '0' : 'translateX(100vw)'};
   animation: slide 0.3s;
   transition: 0.3s;
+  z-index: 100;
+  padding: 0 2rem;
 
+  li {
+    padding: 0.5rem 0;
+    font-size: 2.2rem;
+  }
   @media (min-width: 768px) {
     display: none;
   }
 `
-const SidebarStyled = styled.aside`
-  position: fixed;
-  width: min(75vw, 400px);
-  height: 100%;
-  top: 5rem;
-  right: 0;
-  bottom: 0;
+const SidebarFooter = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 5rem;
-  background-color: #262626;
+  height: 5rem;
+  justify-content: space-between;;
+  margin-bottom: 1rem;
 
-  li {
-    padding: 2rem 0;
-  }
-
-  @keyframes slide {
-    from {right}
+  a {
+    font-size: 2rem;
+    margin-right: 0.3rem;
   }
 `
-
 
 export default Sidebar

@@ -14,8 +14,16 @@ const nav = [
   }
 ];
 
-export const NavLinks = nav.map(link => (
-  <li key={link.id}>
-    <Link to={link.link}>{link.text}</Link>
-  </li>
-));
+export const NavLinks = ({ checkActive }) => {
+  return nav.map(link => (
+    <li key={link.id}>
+      <Link
+        activeClassName='selected'
+        isActive={checkActive}
+        to={link.link}
+      >
+        {link.text}
+      </Link>
+    </li>
+  ))
+}

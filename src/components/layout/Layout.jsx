@@ -6,13 +6,19 @@ import Sidebar from './Sidebar'
 import './layout.css'
 import Hr from './Hr'
 
+const checkActive = (match, location) => {
+  if (!location) return false;
+  const { pathname } = location;
+  return pathname === '/';
+}
+
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <LayoutStyled>
-      <Navbar open={open} setOpen={setOpen} />
-      <Sidebar open={open} />
+      <Navbar open={open} setOpen={setOpen} checkActive={checkActive} />
+      <Sidebar open={open} setOpen={setOpen} checkActive={checkActive} />
       <main className='main-padding'>
         {children}
         <Hr />

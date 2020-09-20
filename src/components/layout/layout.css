@@ -21,8 +21,11 @@ body {
   color: #fff;
   margin: 0 auto;
   max-width: 1170px;
-  padding: 0 1rem;
   font-family: var(--pri-ff);
+}
+
+.main-padding {
+  padding: 5rem 1rem;
 }
 
 @media (min-width: 1200px) {
@@ -30,7 +33,7 @@ body {
     padding: 0;
   }
   .main-padding {
-    padding: 0 4rem;
+    padding: 5rem 4rem;
   }
 }
 
@@ -39,8 +42,15 @@ a {
   text-decoration: none;
 }
 
+a.selected {
+  color: var(--accent-clr);
+}
+
 li {
   list-style: none;
 }
 
-
+.logo {
+  font-size: 1.3rem;
+  font-family: var(--sec-ff);
+}
