@@ -23,7 +23,11 @@ const FootContent = styled.div`
 
 const MadeBy = styled.div`
   display: flex;
-  justify-content: flex-end;
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;  margin-top: 0;
+  }
 `
 
 export default Footer

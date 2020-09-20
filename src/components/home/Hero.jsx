@@ -7,20 +7,23 @@ const Hero = () => {
       Hello! My name is Christina.
       <br />
         I make <span>functional, modern, and minimalistic websites</span>, applications, and anything in between.<br />
-        My main object is <span>frontend</span> web development.
+        My primary interest lie in <span>frontend</span> web development.
     </HeroBody>
   )
 }
 
 const HeroBody = styled.div`
-  margin: 8rem auto;
-  height: 50vh;
+  margin: 3rem auto 5rem;
+  font-size: 1.5rem;
 
-  font-size: 2.5rem;
   span {
     color: var(--accent-clr);
   }
-  margin-bottom: 8rem;
+
+  @media (min-width: 996px){
+    font-size: 2.5rem;
+    margin: 8rem auto 13rem;
+  }
 `
 
 

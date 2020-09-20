@@ -28,6 +28,9 @@ body {
   body {
     padding: 0;
   }
+  .main-padding {
+    padding: 0 4rem;
+  }
 }
 
 a {
@@ -38,3 +41,5 @@ a {
 li {
   list-style: none;
 }
+
+

@@ -21,28 +21,41 @@ const About = () => {
 
   return (
     <AboutSection>
-      <HomeGrid footer title='About'>
-        <AboutBody>
-          I am a frontend developer based in Toronto, ON.<br />
+      <HomeGrid title='About'>
+        <AboutWrapper>
+          <AboutBody>
+            I am a frontend developer based in Toronto, ON.<br />
         I enjoy building beautiful and functional things on the web, and am always open to learning new technologies. During my free time, I study and practice coding, spend time with my dogs, and bake vegan goodies.<br /><br />
         Here are a few technologies I've been working with:
         <ul>
-            <li>HTML/CSS</li>
-            <li>Javascript/React</li>
-            <li>MongoDB/Mongoose</li>
-            <li>Node/Express</li>
-          </ul>
-        </AboutBody>
-        <ImageWrapper>
-          <Image fluid={data.bio.childImageSharp.fluid} />
-        </ImageWrapper>
+              <li>HTML/CSS</li>
+              <li>Javascript/React</li>
+              <li>MongoDB/Mongoose</li>
+              <li>Node/Express</li>
+            </ul>
+          </AboutBody>
+          <ImageWrapper>
+            <Image style={{ opacity: '0.5' }} fluid={data.bio.childImageSharp.fluid} />
+          </ImageWrapper>
+        </AboutWrapper>
       </HomeGrid>
     </AboutSection>
   )
 }
 
 const AboutSection = styled.section`
-  margin: 5rem auto;
+  @media (min-width: 996px) {
+    margin: 4rem auto;
+  }
+`
+
+const AboutWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 3fr 2fr;
+  }
+  grid-gap: 2rem;
 `
 
 const AboutBody = styled.div`
@@ -52,7 +65,7 @@ const AboutBody = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-left: 1.5rem; 
     grid-gap: 0.5rem;
-    margin: 1rem 0 0 1.5rem;
+    margin: 1rem 0 2rem 1.5rem;
   }
   li {
     list-style: square;

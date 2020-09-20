@@ -6,10 +6,8 @@ import { BsFileCode } from 'react-icons/bs'
 
 const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3, stack4 }) => {
   return (
-    <>
-      <ImageWrapper>
-        <Image fluid={image} />
-      </ImageWrapper>
+    <EachProjectStyled>
+      <Image fluid={image} />
       <FeaturedDesc>
         <FeaturedDescTop>
           <div className='name'>{name}</div>
@@ -26,15 +24,23 @@ const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3
           <a href={code}><BsFileCode className='icon' />Code</a>
         </FeaturedLinks>
       </FeaturedDesc>
-    </>
+    </EachProjectStyled>
   )
 }
-const ImageWrapper = styled.div`
+const EachProjectStyled = styled.div`
+  display: grid;
+  grid-template-columns:  1fr;
+  grid-row-gap: 2rem;
+  margin-bottom: 8rem;
 
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10rem; 
+    grid-column-gap: 2rem;
+  }
 `
 
 const FeaturedDesc = styled.div`
-  margin-left: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

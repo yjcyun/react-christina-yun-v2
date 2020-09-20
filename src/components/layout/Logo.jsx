@@ -4,17 +4,14 @@ import styled from 'styled-components'
 
 const Logo = ({ footer }) => (
   <LogoStyled footer={footer}>
-    <Link to='/'>XY.<span>Web</span></Link>
+    <Link to='/'>Christina Yun</Link>
   </LogoStyled>
 )
 
 const LogoStyled = styled.div`
+  font-family: var(--sec-ff);
   a{
     padding-left: ${props => props.footer ? '5px' : '0'}
-  }
-  
-  span{
-    color: var(--accent-clr);
   }
 `
 

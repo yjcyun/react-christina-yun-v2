@@ -13,11 +13,11 @@ const Layout = ({ children }) => {
     <LayoutStyled>
       <Navbar open={open} setOpen={setOpen} />
       <Sidebar open={open} />
-      <main>
+      <main className='main-padding'>
         {children}
+        <Hr />
+        <Footer />
       </main>
-      <Hr />
-      <Footer />
     </LayoutStyled>
   )
 }
