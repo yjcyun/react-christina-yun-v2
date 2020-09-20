@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
-import { HiOutlineGlobeAlt } from 'react-icons/hi'
-import { BsFileCode } from 'react-icons/bs'
+import { IoIosGlobe, IoLogoGithub } from 'react-icons/io'
 
 const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3, stack4 }) => {
   return (
@@ -20,8 +19,9 @@ const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3
           <div className='desc'>{children}</div>
         </FeaturedDescTop>
         <FeaturedLinks>
-          <a href={live}><HiOutlineGlobeAlt className='icon' />Live</a>
-          <a href={code}><BsFileCode className='icon' />Code</a>
+          <a href={live} target='_blank' aria-label='live' rel="noreferrer"><IoIosGlobe className='icon' />Live</a>
+
+          <a href={code} target='_blank' aria-label='github' rel="noreferrer"><IoLogoGithub className='icon' />Code</a>
         </FeaturedLinks>
       </FeaturedDesc>
     </EachProjectStyled>
@@ -31,12 +31,13 @@ const EachProjectStyled = styled.div`
   display: grid;
   grid-template-columns:  1fr;
   grid-row-gap: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 10rem; 
     grid-column-gap: 2rem;
+    margin-bottom: 8rem;
   }
 `
 
@@ -48,7 +49,7 @@ const FeaturedDesc = styled.div`
 
 const FeaturedDescTop = styled.div`
   .name {
-    color: var(--dark-grey);
+    color: var(--light-grey);
   }
   .desc {
     margin: 2rem 0;

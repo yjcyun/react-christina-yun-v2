@@ -11,7 +11,7 @@ const Footer = () => {
         <a href='https://google.ca'>Github</a>
         <a href='https://google.ca'>LinkedIn</a>
       </FootContent>
-      <MadeBy>Made by<Logo footer /></MadeBy>
+      <MadeBy>Made by Christina Yun</MadeBy>
     </HomeGrid>
   )
 }
@@ -26,7 +26,8 @@ const MadeBy = styled.div`
   margin-top: 2rem;
 
   @media (min-width: 768px) {
-    justify-content: flex-end;  margin-top: 0;
+    justify-content: flex-end;  
+    margin-top: 0;
   }
 `
 

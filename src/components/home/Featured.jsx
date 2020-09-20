@@ -29,6 +29,7 @@ const FeaturedSection = styled.section`
 const FeaturedLink = styled.div`
   text-align: center;
   font-size: 1.3rem;
+  margin-bottom: 4rem;
 
   a {
     border: 1px solid var(--accent-clr);

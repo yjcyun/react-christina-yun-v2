@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { archive } from '../../constants/archive'
 import { IoIosGlobe, IoLogoGithub } from 'react-icons/io'
 import { BsDot } from 'react-icons/bs'
+import PageTitle from '../layout/PageTitle'
 
 
 const renderArchive = () => {
@@ -11,18 +12,18 @@ const renderArchive = () => {
   let sortedArchive = archive.sort((a, b) => a.id > b.id ? -1 : b.id > a.id ? 1 : 0);
 
   return sortedArchive.map(({ id, year, title, builtwith, link1, link2 }) => (
-    <tr key={id}>
+    <tr key={id} className='table-content'>
       {/* <td className='year'>{year}</td> */}
-      <td>{title}</td>
+      <td className='title'>{title}</td>
       <td className='built-with'>{builtwith.map((el, i) => (
-        <span>{el}<span className='icon'>
+        <span key={i}>{el}<span className='icon'>
           {i !== builtwith.length - 1 && <BsDot />}</span>
         </span>
       ))}</td>
 
       <td className='links'>
-        <a target='_blank' href={link1}><IoIosGlobe /></a>
-        <a target='_blank' href={link2}><IoLogoGithub /></a>
+        <a target='_blank' aria-label='live' rel="noreferrer" href={link1}><IoIosGlobe /></a>
+        <a target='_blank' aria-label='github' rel="noreferrer" href={link2}><IoLogoGithub /></a>
       </td>
     </tr>
   ))
@@ -30,21 +31,22 @@ const renderArchive = () => {
 
 const PortfolioTable = () => {
   return (
-    <div>
-      <TableStyled>
-        <thead>
-          <tr>
-            {/* <th>Year</th> */}
-            <th>Title</th>
-            <th className='built-with'>Built with</th>
-            <th>Links</th>
-          </tr>
-        </thead>
-        <tbody>
-          {renderArchive()}
-        </tbody>
-      </TableStyled>
-    </div>
+    <>
+    <PageTitle title='Archive' subtitle/>
+    <TableStyled>
+      <thead>
+        <tr className='table-head'>
+          {/* <th>Year</th> */}
+          <th className='title'>Title</th>
+          <th className='built-with'>Built with</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {renderArchive()}
+      </tbody>
+    </TableStyled>
+    </>
   )
 }
 
@@ -52,14 +54,14 @@ const TableStyled = styled.table`
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 
   th {
     color: #444;
   }
 
   th, td {
-    padding: 1rem;
+    padding: 0.5rem 0;
     padding-left: 0;
   }
 
@@ -68,6 +70,19 @@ const TableStyled = styled.table`
     &:first-child {
       margin-right: 1rem;
     }
+  }
+
+  @media(min-width:768px) {
+    th, td {
+      padding: 1rem;
+    }
+    .title {
+      padding-left: 1rem;
+    }
+  }
+
+  .table-content:hover {
+    background-color: var(--dark-grey);
   }
 
   .built-with {

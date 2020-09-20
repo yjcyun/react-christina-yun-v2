@@ -9,7 +9,6 @@ const PortfolioPage = () => {
     <Layout>
       <PageTitle title='Portfolio' />
       <ProjectCard />
-      <PageTitle title='Archive' />
       <PortfolioTable />
     </Layout>
   )

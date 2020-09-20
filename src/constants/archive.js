@@ -4,8 +4,8 @@ export const archive = [
     year: '2020',
     title: 'Plantiful',
     builtwith: ['JS', 'HTML', 'CSS'],
-    link1: 'https://google.ca',
-    link2: 'https://google.ca'
+    link1: 'https://yjcyun.github.io/Plantiful_plants_store/',
+    link2: 'https://github.com/yjcyun/Plantiful_plants_store'
   },
   {
     id: 2,

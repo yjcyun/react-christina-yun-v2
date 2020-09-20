@@ -3,11 +3,12 @@ import { CgMenuRight } from 'react-icons/cg'
 import { NavLinks } from '../../constants/nav'
 import styled from 'styled-components'
 import Logo from './Logo'
+import { Link } from 'gatsby'
 
 const Navbar = ({ open, setOpen }) => {
   return (
     <Header>
-      <Logo />
+      <Link to='/'>Christina Yun</Link>
       <MenuButton onClick={() => setOpen(!open)}>
         <CgMenuRight />
       </MenuButton>
