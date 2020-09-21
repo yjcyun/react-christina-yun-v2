@@ -1,8 +1,6 @@
 # christinayun.ca -v2
 This is the second iteration of christinayun.ca made with Gatsby.
 
-![Homepage screenshot](./public/static/screenshot.png)
-
 ## :construction: Installation & Setup
 
 1. Clone this repo
