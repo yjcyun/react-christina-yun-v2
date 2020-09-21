@@ -1,40 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 const Hero = () => {
   return (
-    <HeroBody>
-      Hello! My name is Christina.
-      <br />
-        I make <span>functional, modern, and minimalistic websites</span>, applications, and anything in between.<br />
-        My primary interest lie in <span>frontend</span> web development.
+    <Fade bottom cascade distance={'1.5rem'}>
+      <HeroBody>
+        Hello! My name is Christina.<br/>
+        I make <span className='accent'>functional, modern, and minimalistic websites</span>, applications, and anything in between.<br />
+        My primary interest lie in <span className='accent'>frontend</span> web development.
     </HeroBody>
+    </Fade>
   )
 }
 
 const HeroBody = styled.div`
   margin: 3rem auto 5rem;
   font-size: 1.5rem;
-  opacity: 1;
-  animation-name: fadeIn;
-  animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
 
-  span {
+ .accent {
     color: var(--accent-clr);
-  }
-
-  @keyframes fadeIn {
-    0%{
-      opacity: 0;
-      transform: translateY(15px);
-    }
-    100%{
-      opacity: 1;
-      transform: translateY(0)
-    }
   }
 
   @media (min-width: 996px){
@@ -42,6 +27,5 @@ const HeroBody = styled.div`
     margin: 8rem auto 13rem;
   }
 `
-
 
 export default Hero

@@ -2,17 +2,17 @@ import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { IoIosGlobe, IoLogoGithub } from 'react-icons/io'
-import Reveal from 'react-reveal/Reveal'
+import Fade from 'react-reveal/Fade'
 
 const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3, stack4 }) => {
   return (
     <EachProjectStyled>
-      <Reveal effect='fadeInUp'>
+      <Fade bottom distance={'1rem'}>
         <Image fluid={image} />
-      </Reveal>
+      </Fade>
       <FeaturedDesc>
         <FeaturedDescTop>
-          <Reveal effect='fadeInUp'>
+          <Fade bottom cascade>
             <div className='name'>{name}</div>
             <div className='stack'>
               <span>{stack1}</span>
@@ -21,12 +21,14 @@ const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3
               <span>{stack4}</span>
             </div>
             <div className='desc'>{children}</div>
-          </Reveal>
+          </Fade>
         </FeaturedDescTop>
         <FeaturedLinks>
-          <a href={live} target='_blank' aria-label='live' rel="noreferrer"><IoIosGlobe className='icon' />Live</a>
+          <Fade bottom cascade>
+            <a href={live} target='_blank' aria-label='live' rel="noreferrer"><IoIosGlobe className='icon' />Live</a>
 
-          <a href={code} target='_blank' aria-label='github' rel="noreferrer"><IoLogoGithub className='icon' />Code</a>
+            <a href={code} target='_blank' aria-label='github' rel="noreferrer"><IoLogoGithub className='icon' />Code</a>
+          </Fade>
         </FeaturedLinks>
       </FeaturedDesc>
     </EachProjectStyled >
@@ -83,4 +85,5 @@ const FeaturedLinks = styled.div`
     margin-right: 4px;
   }
 `
+
 export default EachProject

@@ -1,19 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import HomeGrid from './HomeGrid'
-import Reveal from 'react-reveal/Reveal'
+import Fade from 'react-reveal/Fade'
 
 const Footer = () => {
   return (
     <HomeGrid footer title='Contact'>
-      <Reveal effect='fadeInUp'>
-        <FootContent>
+      <FootContent>
+        <Fade bottom cascade>
           <div>contact [at] christinayun.ca</div>
           <a href='https://github.com/yjcyun'>Github</a>
           <a href='https://www.linkedin.com/in/xtina-yun/'>LinkedIn</a>
-        </FootContent>
-        <MadeBy>Made by Christina Yun</MadeBy>
-      </Reveal>
+        </Fade>
+      </FootContent>
+      <MadeBy>
+        <Fade bottom cascade>Made by Christina Yun</Fade>
+      </MadeBy>
     </HomeGrid>
   )
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import HomeGrid from '../layout/HomeGrid'
 import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
-import Reveal from 'react-reveal/Reveal'
+import Fade from 'react-reveal/Fade'
 
 const bioImage = graphql`
   {
@@ -24,8 +24,8 @@ const About = () => {
     <AboutSection>
       <HomeGrid title='About'>
         <AboutWrapper>
-          <Reveal effect='fadeInUp'>
-            <AboutBody>
+          <AboutBody>
+            <Fade bottom cascade>
               I am a frontend developer based in Toronto, ON.<br />
         I enjoy building beautiful and functional things on the web, and am always open to learning new technologies. During my free time, I study and practice coding, spend time with my dogs, and bake vegan goodies.<br /><br />
         Here are a few technologies I've been working with:
@@ -35,9 +35,11 @@ const About = () => {
                 <li>MongoDB/Mongoose</li>
                 <li>Node/Express</li>
               </ul>
-            </AboutBody>
+            </Fade>
+          </AboutBody>
+          <Fade bottom distance={'1rem'}>
             <Image fluid={data.bio.childImageSharp.fluid} />
-          </Reveal>
+          </Fade>
         </AboutWrapper>
       </HomeGrid>
     </AboutSection>

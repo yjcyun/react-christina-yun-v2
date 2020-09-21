@@ -28,7 +28,7 @@ export const archive = [
     year: '2020',
     title: 'Personal Website v1',
     builtwith: ['React', 'Styled Components'],
-    link1: 'https://v1.christinayun.ca',
+    link1: 'https://christinayun.netlify.app',
     link2: 'https://github.com/yjcyun/react-christina-yun-v1'
   },
   {
