@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 
 const Hero = () => {
   return (
-    <Fade bottom cascade distance={'1.5rem'}>
+    <Fade bottom cascade distance={'1.5rem'} duration={2500}>
       <HeroBody>
         Hello! My name is Christina.<br/>
         I make <span className='accent'>functional, modern, and minimalistic websites</span>, applications, and anything in between.<br />

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <ContactStyled>
       <Fade bottom distance={'1.5rem'}>
-        <p>If you are interested in working with me or have a project for which you need help develop <span>frontend</span>, please send me an email:</p>
+        <p>If you are interested in working with me or have a project for which you need help with <span>frontend</span> development, please send me an email:</p>
       </Fade>
       <Fade bottom distance={'1.5rem'}>
         <p className='email'>contact [at] christinayun.ca</p>

@@ -23,6 +23,9 @@ const Footer = () => {
 const FootContent = styled.div`
   display: flex;
   flex-direction: column;
+  a:hover {
+    color: var(--accent-clr);
+  }
 `
 
 const MadeBy = styled.div`

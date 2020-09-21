@@ -25,7 +25,7 @@ const About = () => {
       <HomeGrid title='About'>
         <AboutWrapper>
           <AboutBody>
-            <Fade bottom cascade>
+            <Fade bottom distance={'1.5rem'}>
               I am a frontend developer based in Toronto, ON.<br />
         I enjoy building beautiful and functional things on the web, and am always open to learning new technologies. During my free time, I study and practice coding, spend time with my dogs, and bake vegan goodies.<br /><br />
         Here are a few technologies I've been working with:

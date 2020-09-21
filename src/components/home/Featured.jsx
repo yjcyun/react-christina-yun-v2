@@ -35,6 +35,10 @@ const FeaturedLink = styled.div`
     border: 1px solid var(--accent-clr);
     padding: 1rem;
     border-radius: 5px;
+    transition: all 0.2s; 
+  }
+  a:hover {
+    background-color: rgba(92, 219, 149, 0.3)
   }
 
   .icon {

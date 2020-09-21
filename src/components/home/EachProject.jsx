@@ -7,12 +7,12 @@ import Fade from 'react-reveal/Fade'
 const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3, stack4 }) => {
   return (
     <EachProjectStyled>
-      <Fade bottom distance={'1rem'}>
+      <Fade bottom distance={'1rem'} duration={2000}>
         <Image fluid={image} />
       </Fade>
       <FeaturedDesc>
-        <FeaturedDescTop>
-          <Fade bottom cascade>
+        <Fade bottom distance={'1.5rem'} duration={2000}>
+          <FeaturedDescTop>
             <div className='name'>{name}</div>
             <div className='stack'>
               <span>{stack1}</span>
@@ -21,8 +21,8 @@ const EachProject = ({ image, name, children, live, code, stack1, stack2, stack3
               <span>{stack4}</span>
             </div>
             <div className='desc'>{children}</div>
-          </Fade>
-        </FeaturedDescTop>
+          </FeaturedDescTop>
+        </Fade>
         <FeaturedLinks>
           <Fade bottom cascade>
             <a href={live} target='_blank' aria-label='live' rel="noreferrer"><IoIosGlobe className='icon' />Live</a>
