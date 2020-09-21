@@ -8,7 +8,7 @@ const Hero = () => {
       <HeroBody>
         Hello! My name is Christina.<br/>
         I make <span className='accent'>functional, modern, and minimalistic websites</span>, applications, and anything in between.<br />
-        My primary interest lie in <span className='accent'>frontend</span> web development.
+        My primary interest lies in <span className='accent'>frontend</span> web development.
     </HeroBody>
     </Fade>
   )

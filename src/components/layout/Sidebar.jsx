@@ -3,20 +3,19 @@ import styled from 'styled-components'
 import { NavLinks } from '../../constants/nav'
 import { IoMdClose, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import { MenuButton } from './Navbar'
+import { Link } from 'gatsby'
 
-
-
-const Sidebar = ({ open, setOpen,checkActive }) => {
+const Sidebar = ({ open, setOpen, checkActive }) => {
   return (
     <SidebarStyled open={open}>
       <div>
         <SidebarTop>
-          <div className='logo'>Christina Yun</div>
+          <Link to='/' className='logo' onClick={() => { setOpen(!open) }}>Christina Yun</Link>
           <MenuButton onClick={() => { setOpen(!open) }}>
             <IoMdClose />
           </MenuButton>
         </SidebarTop>
-        {NavLinks(checkActive)}
+        {NavLinks(checkActive, setOpen, open)}
       </div>
       <SidebarFooter>
         <div>Social Media</div>
@@ -56,12 +55,19 @@ const SidebarStyled = styled.aside`
   animation: slide 0.3s;
   transition: 0.3s;
   z-index: 100;
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   li {
     padding: 0.5rem 0;
     font-size: 2.2rem;
   }
+
+  @media (min-width: 400px) {
+    .main-padding {
+      padding: 0 2rem;
+    }
+  }
+
   @media (min-width: 768px) {
     display: none;
   }
