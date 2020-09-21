@@ -15,7 +15,7 @@ const Sidebar = ({ open, setOpen, checkActive }) => {
             <IoMdClose />
           </MenuButton>
         </SidebarTop>
-        {NavLinks(checkActive, setOpen, open)}
+        {NavLinks(setOpen, open)}
       </div>
       <SidebarFooter>
         <div>Social Media</div>

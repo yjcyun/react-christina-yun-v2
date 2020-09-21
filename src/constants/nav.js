@@ -14,12 +14,11 @@ const nav = [
   }
 ];
 
-export const NavLinks = (checkActive, setOpen, open) => {
+export const NavLinks = (setOpen, open) => {
   return nav.map(link => (
     <li key={link.id}>
       <Link
         activeClassName='selected'
-        isactive={checkActive}
         to={link.link}
         onClick={() => setOpen(!open)}
       >
