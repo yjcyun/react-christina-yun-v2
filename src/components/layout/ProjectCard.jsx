@@ -11,7 +11,7 @@ const projectImages = graphql`
         }
       }
     }
-    gotravel: file(relativePath: {eq: "gotravel.png"}) {
+    reactfitandco: file(relativePath: {eq: "reactfitandco.png"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -37,16 +37,16 @@ const ProjectCard = () => {
         A multi-page portfolio website built for an actress featured with a full biography page, blog, and gallery. Content easily maintainable by user using CMS(Strapi).
       </EachProject>
       <EachProject
-        image={data.gotravel.childImageSharp.fluid}
-        name='GO TRAVEL'
-        live='https://google.ca'
-        code='https://google.ca'
+        image={data.reactfitandco.childImageSharp.fluid}
+        name='ReactFit&Co'
+        live='https://reactfitandco.herokuapp.com/'
+        code='https://github.com/yjcyun/ReactFit'
         stack1='React'
         stack2='Express'
         stack3='Node'
         stack4='MongoDB'
       >
-        A travel agency website complete with an admin page where an user(admin) can easily maintain the database using CRUD operations.
+        An e-commerce website
       </EachProject>
     </div>
   )

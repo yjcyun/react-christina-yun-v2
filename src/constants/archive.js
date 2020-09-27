@@ -70,5 +70,13 @@ export const archive = [
     builtwith: ['React', 'Redux', 'Styled Components', 'Node', 'Express', 'MongoDB'],
     link1: 'https://go-travel-agency.herokuapp.com/',
     link2: 'https://github.com/yjcyun/GoTravel'
+  },
+  {
+    id: 10,
+    year: '2020',
+    title: 'ReactFit & Co.',
+    builtwith: ['React', 'Redux', 'Styled Components', 'Node', 'Express', 'MongoDB'],
+    link1: 'https://reactfitandco.herokuapp.com/',
+    link2: 'https://github.com/yjcyun/ReactFit'
   }
 ]
